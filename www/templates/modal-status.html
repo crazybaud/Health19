@@ -3,39 +3,40 @@
         <h1 class="title" style="left: 67px; right: 67px;">Mon état</h1>
         <button class="button button-clear button-primary activated" ng-click="closeModal()">Plus tard</button>
     </ion-header-bar>
-<ion-content class="padding">
-<div class="row">
-   <div class="col text-center">
-    <br/><br/><br/><br/><br/><br/>
-    <p style="font-size: 8vw;color:#444;line-height:120%;text-align:center;">
-        {{tree[treeindex].question}}
-    </p>
-    <br/><br/><br/><br/><br/>
-    <div class="button-bar bar-calm" style="width:90%;padding-left:30px;" ng-show="tree[treeindex].type == 'bool'">
-        <a class="button button-large" ng-click="clickedKO()">Non</a>
-        <a class="button button-large" ng-click="clickedOK()">Oui</a>
-    </div>
-    <div ng-show="tree[treeindex].type == 'eva'">
-        <div class="list">
-            <div class="item range range-positive">
-            0
-            <input type="range" name="volume" min="0" max="10" value="0" ng-model="tree[treeindex].value">
-            10
+    <ion-content class="padding">
+        <div class="row">
+            <div class="col text-center">
+                <br/><br/><br/><br/><br/>
+                <p style="font-size: 8vw;color:#444;line-height:120%;text-align:center;">
+                    {{tree[treeindex].question}}
+                </p>
+                <br/><br/><br/><br/>
+                <div class="button-bar bar-calm" style="width:90%;padding-left:30px;" ng-show="tree[treeindex].type == 'bool'">
+                    <a class="button button-large" ng-click="clickedKO()">Non</a>
+                    <a class="button button-large" ng-click="clickedOK()">Oui</a>
+                </div>
+                <div ng-show="tree[treeindex].type == 'eva'">
+                    <div class="list">
+                        <div class="item range range-positive">
+                        0
+                        <input type="range" name="volume" min="0" max="10" value="0" ng-model="tree[treeindex].value">
+                        10
+                        </div>
+                    </div>
+                    <br/>
+                    <p style="text-align:center;font-size: 6vw;color:#444;">{{tree[treeindex].value}}</p>
+                    <br/>
+                    <a class="button button-large button-calm" ng-click="confirmedETA(tree[treeindex].value)">Je confirme</a>
+                </div>
+                <div ng-show="tree[treeindex].type == 'end'">
+                    <br/>
+                    <!-- {{finalstatus}} -->
+                    <div class="button button-large button-calm" style="line-height: 100px;width: 230px;font-size:30px" ng-click="goToHome()">
+                        Terminer
+                    </div>
+                </div>
+                <br/><br/><br/><br/>
             </div>
         </div>
-        <br/>
-        <p style="text-align:center;font-size: 6vw;color:#444;">{{tree[treeindex].value}}</p>
-        <br/>
-        <a class="button button-large button-calm" ng-click="confirmedETA(tree[treeindex].value)">Je confirme</a>
-    </div>
-    <div ng-show="tree[treeindex].type == 'end'">
-        <br/>
-        <!-- {{finalstatus}} -->
-        <div class="button button-large button-calm" style="line-height: 100px;width: 230px;font-size:30px" ng-click="goToHome()">
-            Terminer
-        </div>
-    </div>
-    <br/><br/><br/><br/>
-</div></div>
-  </ion-content>
+    </ion-content>
 </ion-modal-view>
