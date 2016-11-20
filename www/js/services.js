@@ -6,30 +6,26 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way? You on your way? You on your way? You on your way? You on your way? You on your way? You on your way? ',
-    face: 'img/ben.png'
+    lastText: 'Pensez à passer chez votre pharmacien.',
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    hours: '15h00',
+    lastText: 'Comment allez-vous ?',
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    hours: '18h00',
+    lastText: 'Comment allez-vous ?',
+    details: 'Pensez bien à prendre vos médicaments',
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    hours: '19h00',
+    lastText: 'Vous devez manger légèrement ce soir. Vous ne pourrez pas manger demain matin, mais vous pourrez boire.',
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    hours: '20h00',
+    lastText: 'Prenez bien votre douche antiseptique ce soir et demain matin.',
   }];
+
 
   return {
     all: function() {
