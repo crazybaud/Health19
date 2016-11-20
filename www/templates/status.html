@@ -1,18 +1,26 @@
-<ion-view view-title="Status">
+<ion-view view-title="Mon état">
   <ion-content class="padding">
-    <p>
-      Ici l'arbre de décision avec les boutons Ionic à venir
+<div class="row">
+   <div class="col text-center">
+    <br/><br/><br/><br/>
+    <p style="font-size: 8vw;color:#444;line-height:120%;text-align:center;">
+        {{tree[treeindex].question}}
     </p>
-    <code>
-    Allez-vous moins bien qu'aux urgences ?
-    Oui / Non
-        si oui, Quel est votre niveau de douleur de 1 à 10 => envoyer signal 5-8orange 9-10 rouge
-    Votre abdomen est-il gonflé ?
-    Oui/Non
-    Avez-vous des vosimeents ?
-    Oui/non
-        si oui, avez-vous réussi à prendre votre traimeent ?
-            si oui, avez-vous réussi à boire ? => rouge
-    </code>
+    <br/>
+    <div class="button-bar bar-calm" style="width:90%;padding-left:30px;" ng-show="tree[treeindex].type == 'bool'">
+        <a class="button button-large" ng-click="treeindex = tree[treeindex].non">Non</a>
+        <a class="button button-large" ng-click="treeindex = tree[treeindex].oui">Oui</a>
+    </div>
+        <div class="list" ng-show="tree[treeindex].type == 'eva'">
+          <div class="item range range-positive">
+            0
+            <input type="range" name="volume" min="1" max="10" value="1">
+            10
+          </div>
+          5
+        </div>
+    </div>
+    <br/><br/><br/><br/>
+</div></div>
   </ion-content>
 </ion-view>
