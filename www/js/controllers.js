@@ -1,7 +1,14 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $state) {
+    $scope.goToStatus = function() {
+        $state.go('tab.status');
+    };
+})
+
+.controller('StatusCtrl', function($scope, $state) {
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
