@@ -17,6 +17,9 @@ angular.module('starter.controllers', [])
         $scope.modal.show();
     };
     $scope.closeModal = function() {
+        // on reinit et fermer la modal
+        $scope.treeindex = 0;
+        $scope.finalstatus = "vert";
         $scope.modal.hide();
     };
 
@@ -153,9 +156,6 @@ angular.module('starter.controllers', [])
             data: { "id": "1", "date": "12/02/44", "alert": "orange"}
         });
 
-        // on reinit et fermer la modal
-        $scope.treeindex = 0;
-        $scope.finalstatus = "vert";
         $scope.closeModal();
 
     };
